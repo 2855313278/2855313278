@@ -60,7 +60,7 @@ git status --short
 - PowerShell 与 Python 正则引号嵌套导致第一次验证命令未执行；改用 PowerShell 单引号 here-string 输入 Python，验证通过后提交。
 - GitHub CLI 已安装但不在 PATH，使用 `C:\Program Files\GitHub CLI\gh.exe` 调用。
 - GitHub CLI 起初未登录；直接连接设备授权接口超时。读取系统已启用的代理设置，在该进程中设置代理后，成功取得浏览器授权验证码。
-- 发布需要账号本人完成 GitHub 浏览器授权。此记录不代表远端已发布，远端状态以实际仓库为准。
+- 账号本人已完成 GitHub 浏览器授权，CLI 核实登录账号为 `2855313278`。
 
 ## 发布约定
 
@@ -69,3 +69,19 @@ git status --short
 - 不覆盖已有仓库内容，不使用强制推送；如遇已有内容，先检查再合并。
 
 一句话特点：以原创 SVG 横幅和轻量双语 README 构建不依赖外部图片服务的 GitHub 个人主页。
+
+## 发布结果
+
+- 已创建公开仓库：https://github.com/2855313278/2855313278 。创建前确认该同名仓库不存在。
+- 已将本地 `refactor/auto` 发布为远端 `main`，并将 `main` 设为默认分支。
+- GitHub API 返回的远端 README 与本地已验证内容一致。
+- 未登录浏览器访问 https://github.com/2855313278 返回 HTTP 200；主页出现欢迎语，内置横幅成功加载；线上截图已检查。
+- 验证推送时，本地 HEAD 与远端 `main` 提交一致。
+
+```powershell
+& 'C:\Program Files\GitHub CLI\gh.exe' repo view 2855313278/2855313278 --json name,isPrivate,defaultBranchRef,url
+git rev-parse HEAD
+git ls-remote origin refs/heads/main
+```
+
+后续修改在 `refactor/auto` 分支提交后，用 `git push origin HEAD:main` 更新主页。
