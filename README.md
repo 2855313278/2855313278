@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/2855313278?tab=repositories"><b>项目 · Repositories</b></a>
+  <a href="https://github.com/2855313278?tab=repositories"><b>项目</b></a>
   &nbsp;&nbsp; / &nbsp;&nbsp;
-  <a href="https://github.com/2855313278?tab=stars"><b>收藏 · Stars</b></a>
+  <a href="https://github.com/2855313278?tab=stars"><b>收藏</b></a>
   &nbsp;&nbsp; / &nbsp;&nbsp;
-  <a href="https://github.com/2855313278?tab=overview#year-list-container"><b>足迹 · Activity</b></a>
+  <a href="https://github.com/2855313278?tab=overview#year-list-container"><b>动态</b></a>
 </p>
 
 <br />
